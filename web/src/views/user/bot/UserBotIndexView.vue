@@ -199,11 +199,12 @@ export default {
                     Authorization: "Bearer " + store.state.user.token,
                 },
                 success(resp) {
+                    console.log(resp.error_message);
                     if (resp.error_message === "success") {
                         Modal.getInstance('#update-bot-modal-' + bot.id).hide();
                         refresh_bots();
                     } else {
-                        botadd.error_message = resp.error_message;
+                        bot.error_message = resp.error_message;
                     }
                 }
             })

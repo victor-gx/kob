@@ -90,6 +90,6 @@ public class UpdateServiceImpl implements UpdateService {
 
         map.put("error_message", "success");
 
-        return null;
+        return map;
     }
 }

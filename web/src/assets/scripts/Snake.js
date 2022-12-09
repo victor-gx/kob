@@ -60,7 +60,7 @@ export class Snake extends AcGameObject {
         const d = this.direction;
         this.next_cell = new Cell(this.cells[0].r + this.dr[d], this.cells[0].c + this.dc[d]);
         this.direction = -1; // 清空操作
-        this.start = "move";
+        this.status = "move";
         this.step ++ ;
         this.eye_direction = d;
 
